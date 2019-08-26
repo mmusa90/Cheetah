@@ -1,7 +1,12 @@
 # Cheetah
 Live Deployment
 
-Built on Power Shell
+Built on Power Shell. 
+
+The applicaiton purpose is to be able to deploy applications to employee workstaitons using PSExec.
+
+About PsExec: https://docs.microsoft.com/en-us/sysinternals/downloads/psexec
+
 
 Requirements:
 
@@ -13,6 +18,7 @@ Requirements:
 
 4- Make sure you set location of software in Batch Scripts.
 
+5- Port 445 is opened on workstation.
 
 I added batch scripts, so you can get a hint.
 
