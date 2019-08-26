@@ -9,7 +9,9 @@ Requirements:
 
 2- Make sure you set the PSexec to folder on Network path or local by ".\PSexec"
 
-3- Make sure you set where you batch scripts on Network folder or local.
+3- Make sure you set where you batch scripts location on Network folder or local.
+
+4-Make sure you set location of software in Batch Scripts.
 
 
 I added batch scripts, so you can get a hint.
