@@ -11,7 +11,7 @@ Requirements:
 
 3- Make sure you set where you batch scripts location on Network folder or local.
 
-4-Make sure you set location of software in Batch Scripts.
+4- Make sure you set location of software in Batch Scripts.
 
 
 I added batch scripts, so you can get a hint.
