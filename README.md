@@ -60,4 +60,10 @@ https://gallery.technet.microsoft.com/PS1-To-EXE-Generator-d39e8be2
 Note: You will need to check "Require Admin Rights", so anyone will know by default it will need Admin Privillages to run. Otherwise it won't workout.
 
 
+Contact Me if you have any question:
+
+https://www.linkedin.com/in/mikemusa/
+
+mikemusa@protonmail.com
+
 
