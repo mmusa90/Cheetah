@@ -312,14 +312,14 @@ if ($x.Equals('AlwaysOnVPN')){ <#Install AlwaysOnVPN Update or update it if it h
 
 
 
-XCOPY "$CheetahPath\Apps\vpn" \\$Server\C$\vpn /s /i /Y
+XCOPY "$CheetahPath\vpn" \\$Server\C$\vpn /s /i /Y
 
 
 
 
 
 
-$CheetahPath\Apps\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  \\$Server\C$\vpn\vpn.bat
+$CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  \\$Server\C$\vpn\vpn.bat
 
 
 
