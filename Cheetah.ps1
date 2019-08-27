@@ -196,7 +196,7 @@ if ($x.Equals('SilverLight 2019')){ <#Install Silverlight or update it if it has
 
 
 $CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  $CheetahPath\silver\silver.bat
-=======
+
 
 Clear
 
@@ -225,7 +225,7 @@ if ($x.Equals('GP 2018')){ <#Install GP18 or update it if it has been selected#>
 
 
 $CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  $CheetahPath\GP\install.bat
-=======
+
 
 
 clear
