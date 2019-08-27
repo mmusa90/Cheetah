@@ -66,14 +66,6 @@ $CancelButton.DialogResult = [System.Windows.Forms.DialogResult]::Cancel <#Actio
 $form.CancelButton = $CancelButton <#Create button in form#>
 $form.Controls.Add($CancelButton)
 
-
-$About_ME = New-Object System.Windows.Forms.Button <# Creation Button Design#>
-$About_ME.Location = New-Object System.Drawing.Point(350,150) <# Button Location#>
-$About_ME.Size = New-Object System.Drawing.Size(75,23)<# Button Size #>
-$About_ME.Text = 'Author'<# Label Text for button #>
-$About_ME.add_Click({[system.Diagnostics.Process]::start("https://www.linkedin.com/in/mikemusa/")}) 
-$form.Controls.Add($About_ME)
-
 $label = New-Object System.Windows.Forms.Label <# Creation form label #>
 $label.Location = New-Object System.Drawing.Point(10,20) <# Label location#>
 $label.Size = New-Object System.Drawing.Size(280,20)<# label size#>
@@ -155,9 +147,10 @@ pause
 if ($x.Equals('7-ZIP 2019')){ <#Install 7-ZIP or update it if it has been selected#>
 
 
-#Location of PsExec                           #Server=Workstation  # Command you want to run as an admin 
+
 
 $CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  $CheetahPath\7z\7z.bat #Batch script
+
 
 Clear
 
@@ -173,7 +166,9 @@ if ($x.Equals('Adobe Reader 2019')){ <#Install Adobe or update it if it has been
 
 
 
+
 $CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  $CheetahPath\adobe\adobe.bat
+
 
 Clear
 
@@ -186,7 +181,9 @@ if ($x.Equals('VLC 2019')){ <#Install VLC or update it if it has been selected#>
 
 
 
+
 $CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  $CheetahPath\vlc\vlc.bat
+
 
 Clear
 
@@ -197,7 +194,10 @@ pause
 if ($x.Equals('SilverLight 2019')){ <#Install Silverlight or update it if it has been selected#>
 
 
+
 $CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  $CheetahPath\silver\silver.bat
+=======
+
 Clear
 
 Write-Host "The" $x "has been sucessfully deployed to" $Server 
@@ -209,7 +209,10 @@ if ($x.Equals('Horizon POS 2019')){ <#Install POS or update it if it has been se
 
 
 
+
 $CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min $CheetahPath\POS\Install.bat
+
+
 Clear
 
 Write-Host "The" $x "has been sucessfully deployed to" $Server 
@@ -222,6 +225,8 @@ if ($x.Equals('GP 2018')){ <#Install GP18 or update it if it has been selected#>
 
 
 $CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  $CheetahPath\GP\install.bat
+=======
+
 
 clear
 
@@ -234,7 +239,9 @@ if ($x.Equals('Windows Update 1809')){ <#Install Windows Update or update it if 
 
 
 
+
 $CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  $CheetahPath\Windows\Windows\update.bat
+
 
 clear
 
@@ -247,7 +254,9 @@ if ($x.Equals('Java Update 2019')){ <#Install Java Update or update it if it has
 
 
 
+
 $CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  $CheetahPath\Java\java.bat
+
 
 clear
 
@@ -256,6 +265,7 @@ pause
 }
 
 if ($x.Equals('iTunes 2019')){ <#Install iTunes Update or update it if it has been selected#>
+
 
 
 
@@ -273,7 +283,9 @@ if ($x.Equals('Meadco Script-PCC addon')){ <#Install Meadco Script Update or upd
 
 
 
+
 $CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  $CheetahPath\Meadco-PCC\Meadco.bat
+
 
 clear
 
@@ -286,7 +298,9 @@ if ($x.Equals('I25-Fix Badge barcode')){ <#Install I25-Fix Badge barcode Update 
 
 
 
+
 $CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  $CheetahPath\i25\i25.bat
+
 
 clear
 
@@ -297,12 +311,17 @@ pause
 if ($x.Equals('AlwaysOnVPN')){ <#Install AlwaysOnVPN Update or update it if it has been selected#>
 
 
+
 XCOPY "$CheetahPath\Apps\vpn" \\$Server\C$\vpn /s /i /Y
 
 
 
 
+
+
 $CheetahPath\Apps\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  \\$Server\C$\vpn\vpn.bat
+
+
 
 clear
 
