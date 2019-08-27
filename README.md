@@ -22,6 +22,10 @@ Requirements:
 
 I added batch scripts, so you can get a hint.
 
+Or you can use this:
+
+https://ninite.com/
+
 
 In order to convert EXE to MSI, so you can have easily run it as silent on workstation without any user interaction. I highly recommend  these software:-
 
