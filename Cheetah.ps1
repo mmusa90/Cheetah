@@ -31,6 +31,10 @@
 ##
 ##
 ##fd6a9f26a06ea3bc99616d4851b372ba
+
+### Location Variables###
+$CheetahPath = '\\NetworkPath\E\Apps'
+
 $Server = Read-Host -Prompt 'Input Computer Name or IP Address'<# User Input#>
 
 If (Test-NetConnection  $Server -CommonTCPPort SMB -InformationLevel Quiet) {  <#Test Computer, if it's live processed #>
@@ -144,7 +148,9 @@ if ($x.Equals('7-ZIP 2019')){ <#Install 7-ZIP or update it if it has been select
 
 
 
-\\dc01\Apps\PsExec\PsExec.exe -i -s -d \\$Server cmd /c start /min \\dc01\Apps\7z\7z.bat
+
+$CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  $CheetahPath\7z\7z.bat #Batch script
+
 
 Clear
 
@@ -159,7 +165,10 @@ if ($x.Equals('Adobe Reader 2019')){ <#Install Adobe or update it if it has been
 
 
 
-\\dc01\Apps\PsExec\PsExec.exe -i -s -d \\$Server cmd /c start /min  \\dc01\Apps\adobe\adobe.bat
+
+
+$CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  $CheetahPath\adobe\adobe.bat
+
 
 Clear
 
@@ -172,7 +181,9 @@ if ($x.Equals('VLC 2019')){ <#Install VLC or update it if it has been selected#>
 
 
 
-\\dc01\Apps\PsExec\PsExec.exe -i -s -d \\$Server cmd /c start /min  \\dc01\Apps\vlc\vlc.bat
+
+$CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  $CheetahPath\vlc\vlc.bat
+
 
 Clear
 
@@ -183,7 +194,10 @@ pause
 if ($x.Equals('SilverLight 2019')){ <#Install Silverlight or update it if it has been selected#>
 
 
-\\dc01\Apps\PsExec\PsExec.exe -i -s -d \\$Server cmd /c start /min  \\dc01\Apps\silver\silver.bat
+
+$CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  $CheetahPath\silver\silver.bat
+=======
+
 Clear
 
 Write-Host "The" $x "has been sucessfully deployed to" $Server 
@@ -195,7 +209,10 @@ if ($x.Equals('Horizon POS 2019')){ <#Install POS or update it if it has been se
 
 
 
-\\dc01\Apps\PsExec\PsExec.exe -i -s -d \\$Server cmd /c start /min \\dc01\Apps\POS\Install.bat
+
+$CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min $CheetahPath\POS\Install.bat
+
+
 Clear
 
 Write-Host "The" $x "has been sucessfully deployed to" $Server 
@@ -207,7 +224,9 @@ if ($x.Equals('GP 2018')){ <#Install GP18 or update it if it has been selected#>
 
 
 
-\\dc01\Apps\PsExec\PsExec.exe -i -s -d \\$Server cmd /c start /min  \\dc01\Apps\GP\install.bat
+$CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  $CheetahPath\GP\install.bat
+=======
+
 
 clear
 
@@ -220,7 +239,9 @@ if ($x.Equals('Windows Update 1809')){ <#Install Windows Update or update it if 
 
 
 
-\\dc01\Apps\PsExec\PsExec.exe -i -s -d \\$Server cmd /c start /min  \\dc01\Apps\Windows\Windows\update.bat
+
+$CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  $CheetahPath\Windows\Windows\update.bat
+
 
 clear
 
@@ -233,7 +254,9 @@ if ($x.Equals('Java Update 2019')){ <#Install Java Update or update it if it has
 
 
 
-\\dc01\Apps\PsExec\PsExec.exe -i -s -d \\$Server cmd /c start /min  \\dc01\Apps\Java\java.bat
+
+$CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  $CheetahPath\Java\java.bat
+
 
 clear
 
@@ -246,7 +269,8 @@ if ($x.Equals('iTunes 2019')){ <#Install iTunes Update or update it if it has be
 
 
 
-\\dc01\Apps\PsExec\PsExec.exe -i -s -d \\$Server cmd /c start /min  \\dc01\Apps\iTunes\itunes.bat
+
+$CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  $CheetahPath\iTunes\itunes.bat
 
 clear
 
@@ -259,7 +283,9 @@ if ($x.Equals('Meadco Script-PCC addon')){ <#Install Meadco Script Update or upd
 
 
 
-\\dc01\Apps\PsExec\PsExec.exe -i -s -d \\$Server cmd /c start /min  \\dc01\Apps\Meadco-PCC\Meadco.bat
+
+$CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  $CheetahPath\Meadco-PCC\Meadco.bat
+
 
 clear
 
@@ -272,7 +298,9 @@ if ($x.Equals('I25-Fix Badge barcode')){ <#Install I25-Fix Badge barcode Update 
 
 
 
-\\dc01\Apps\PsExec\PsExec.exe -i -s -d \\$Server cmd /c start /min  \\dc01\Apps\i25\i25.bat
+
+$CheetahPath\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  $CheetahPath\i25\i25.bat
+
 
 clear
 
@@ -283,12 +311,17 @@ pause
 if ($x.Equals('AlwaysOnVPN')){ <#Install AlwaysOnVPN Update or update it if it has been selected#>
 
 
-XCOPY '\\wh-deployment\E$\Apps\vpn' \\$Server\C$\vpn /s /i /Y
+
+XCOPY "$CheetahPath\Apps\vpn" \\$Server\C$\vpn /s /i /Y
 
 
 
 
-\\dc01\Apps\PsExec\PsExec.exe -i -s -d \\$Server cmd /c start /min  \\$Server\C$\vpn\vpn.bat
+
+
+$CheetahPath\Apps\PSTools\PsExec.exe -i -s -d \\$Server cmd /c start /min  \\$Server\C$\vpn\vpn.bat
+
+
 
 clear
 
